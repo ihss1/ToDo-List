@@ -1,5 +1,6 @@
 import { useState } from "react";
 import './todo.css'
+import { MdAddTask } from "react-icons/md";
 
 
 export const ToDoList =()=>{
@@ -27,8 +28,8 @@ export const ToDoList =()=>{
         <div className="container">
             <h1> todo list </h1> 
         </div>
-        <div onClick={handleClick}> 
-        {!list }
+        <div  onClick={handleClick}> 
+        {!list &&<MdAddTask />}
         </div>
         {list && 
             <div>
